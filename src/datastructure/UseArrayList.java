@@ -58,12 +58,12 @@ public class UseArrayList {
         connectDB.insertDataFromArrayListToSqlTable(list, "arr_li", "listElement");
         //Read data from database
         //
-        /*List<String> numbers = (List<String>) connectDB.readDataBase("arr_list", "listElement");
-        for (String st : numbers) {
-            System.out.println(st);
-        }*/
+        //List<String> numbers = (List<String>) connectDB.readDataBase("arr_list", "listElement");
+        //for (String st : numbers) {
+          //  System.out.println(st);
+        }
     }
-}
+
 
 
 
