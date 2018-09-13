@@ -21,7 +21,13 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+	private int employeeId;
+	private String employeeName;
+	private String departmentName;
+	private double salary;
+	private int performance;
+
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -33,10 +39,49 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId = employeeId;
 	}
-    public EmployeeInfo(String name, int employeeId){
-		
+    public EmployeeInfo(String employeeName, int employeeId){
+		this.employeeName = employeeName;
+		this.employeeId = employeeId;
+	}
+
+	public void  setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	public int employeeId() {
+		return employeeId;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	public String employeeName() {
+		return employeeName;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
+	}
+
+	//assignDepartment() will assign employee to departments
+	public void assignDepartment(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
 	}
 	
 	/*

@@ -167,7 +167,7 @@ public class ConnectToSqlDB {
         try {
             connectToSqlDatabase();
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
+                ps.setString(1," Md Hasan");
                 ps.setInt(2,3590);
                 ps.executeUpdate();
 
@@ -215,5 +215,27 @@ public class ConnectToSqlDB {
         for(User user:list){
             System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
         }
+    }
+
+///////////////////////////////////////
+public void createTableFromToMySql(String empRecord, String use_map, String emp_record) {
+}
+
+    public void insertDataFromArrayToSqlTable(List<String> list1, String emp_record, String employee_id, String employee_info) {
+    }
+
+    public void ConnectToSqlDB(String emp_record, String employee_id, String employee_info) {
+
+
+    }
+
+    public void insertDataFromArrayToSqlTabl(int[] num, String sortingNumbers) {
+    }
+
+    public void insertDataFromArrayListToSqlTable(List<String> map1, String use_map, String mapKey, String mapValue) {
+    }
+
+
+    public void createTableFromToMySql(String mapKey, String mapValue) {
     }
 }
