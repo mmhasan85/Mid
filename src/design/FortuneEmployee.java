@@ -13,10 +13,8 @@ public class FortuneEmployee {
 	 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 	 *
 	 **/
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
 
-
-
-	}
+    }
 
 }

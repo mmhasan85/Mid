@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UseArrayList {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         /*
          * Demonstrate how to use ArrayList that includes add,peek,remove,retrieve elements.
          * Use For Each loop and while loop with Iterator to retrieve data.
@@ -41,8 +41,7 @@ public class UseArrayList {
         System.out.println("Use of iterator using while loop: ");
         Iterator it = arrli.iterator();
         while (it.hasNext()) {
-            Integer i = (Integer) it.next();
-            System.out.println(i);
+            System.out.println(it.next());
 
         }
 //Sorting ArrayList
@@ -51,20 +50,25 @@ public class UseArrayList {
         List list = new ArrayList();
         list = arrli;
         //connect to MYSql Database
-        ConnectToSqlDB connectDB = new ConnectToSqlDB();
-        //Create table in the database
-        connectDB.createTableFromToMySql("emp_record", "use_map", "arr_li");
-        //insert data in the database
-        connectDB.insertDataFromArrayListToSqlTable(list, "arr_li", "listElement");
-        //Read data from database
-        //
-        //List<String> numbers = (List<String>) connectDB.readDataBase("arr_list", "listElement");
-        //for (String st : numbers) {
-          //  System.out.println(st);
+        try {
+            ConnectToSqlDB connectDB = new ConnectToSqlDB();
+            //Create table in the database
+            connectDB.createTableFromToMySql("emp_record", "use_map", "arr_li");
+            //insert data in the database
+            connectDB.insertDataFromArrayListToSqlTable(list, "arr_li", "listElement");
+            //Read data from database
+
+            List<String> numbers = (List<String>) connectDB.readDataBase("arr_list", "listElement");
+            for (String st : numbers) {
+                System.out.println(st);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
         }
+
     }
 
-
+}
 
 
 
